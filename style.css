@@ -124,25 +124,19 @@ h3
     color: crimson;
 }
 
-.header-link_block
-{
-    height: 100%;
-    align-items: center;
-    display: flex;
-    font-size: 1.3em;
-}
 .header-link-ul
 {
     display: flex;
-    margin-right: 30px;
     align-items: center;
+    font-size: 1.1em;
 }
 .header-link-a
 {
-    min-width: 20%;
     text-align: center;
     border-radius: 3px;
     text-shadow: 4px 20px 3px rgb(47, 77, 56);
+    padding: 0 5px;
+    box-sizing: unset;
 }
 .header-link-a:hover
 {
@@ -150,6 +144,7 @@ h3
     background: rgb(116, 255, 209);
     color: rgb(0, 0, 0);
     text-shadow: none;
+    transition: 0.5s;
 }
 .header-link-li
 {
@@ -157,7 +152,6 @@ h3
     font-size: 1.2em;
     opacity: 0.9;
     align-items: center;
-    margin: 0 10px;
 }
 .header-boder
 {
@@ -165,6 +159,7 @@ h3
     height: 18px;
     border: 1px solid rgb(77, 73, 73);
     box-shadow: 4px 20px 2px rgb(51, 48, 48);
+    margin: 0 20px;
 }
 .header-link-input
 {
@@ -190,17 +185,12 @@ h3
 .header-icon
 {
     position: absolute;
-    color: dimgrey;
+    color: #170F23;
     top: 50%;
     transform: translateY(-50%);
     left: 87%;
-    font-size: 0.8em;
+    font-size: 1em;
 }
-.header-icon:hover
-{
-    color: #170F23;
-}
-
 
 
 .header-box-audio
@@ -525,6 +515,7 @@ main
     right: 0;
     top: 0;
     border-bottom-left-radius: 6px;
+    border-top-right-radius: 4px;
 }
 .nav-right-play
 {
