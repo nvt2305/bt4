@@ -123,25 +123,18 @@ h3
 {
     color: crimson;
 }
-.header-link
-{
-    height: 100%;
-   
-}
+
 .header-link_block
 {
     height: 100%;
     align-items: center;
     display: flex;
-    justify-content: space-between;
     font-size: 1.3em;
-    flex: 0.75;
 }
 .header-link-ul
 {
     display: flex;
-    justify-content: space-between;
-    flex: 0.9;
+    margin-right: 30px;
     align-items: center;
 }
 .header-link-a
@@ -164,7 +157,7 @@ h3
     font-size: 1.2em;
     opacity: 0.9;
     align-items: center;
-    
+    margin: 0 10px;
 }
 .header-boder
 {
