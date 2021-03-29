@@ -1,0 +1,902 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    height: 100vh;
+    color:white;
+    background: black;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+}
+ul
+{
+    list-style: none;
+}
+
+
+.background
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 1204px;
+    border-radius: 5px;
+    height: 70%;
+    background: linear-gradient(180deg, rgb(0, 255, 42), rgb(158, 218, 241), rgb(232, 255, 104),rgb(158, 218, 241), rgb(0, 255, 42));
+    position: fixed;
+    animation: ex 1s linear infinite;
+}
+
+
+@keyframes ex 
+{
+    20%
+    {
+        box-shadow: 0 0 10px #29ffdb,
+        0 0 40px blue;
+        background: linear-gradient(180deg, rgb(0, 255, 42), rgb(158, 218, 241), rgb(232, 255, 104),rgb(158, 218, 241), rgb(0, 255, 42));
+    }
+    40% 
+    {
+        box-shadow: none;
+        background: linear-gradient(180deg, rgb(55, 0, 255), rgb(158, 218, 241), rgb(109, 255, 116),rgb(158, 218, 241), rgb(0, 47, 255));
+    }
+    60%
+    {
+        box-shadow: 0 0 10px bisque,
+        0 0 40px rgb(77, 255, 246);
+        background: linear-gradient(180deg, rgb(222, 240, 255), rgb(228, 255, 153), rgb(104, 169, 255),rgb(152, 238, 130), rgb(203, 241, 209));
+    }
+    80%
+    {
+        box-shadow: none;
+        background: linear-gradient(180deg, rgb(195, 0, 255), rgb(158, 218, 241), rgb(232, 255, 104),rgb(158, 218, 241), rgb(204, 0, 255));
+    }
+    100%
+    {
+        box-shadow: 0 0 10px rgb(159, 255, 70),
+        0 0 40px red;
+        background: linear-gradient(180deg, rgb(255, 153, 0), rgb(158, 159, 241), rgb(100, 255, 113),rgb(116, 114, 233), rgb(255, 217, 0));
+    }
+}
+
+
+.container
+{
+    width: 1200px;
+    background: #170F23;
+    margin: auto;
+    position:static;
+}
+
+header
+{
+    height: 20vh;
+    min-height: 105px;
+    width: 1200px;
+    border-bottom: 2px solid rgb(32, 31, 31);
+    display: flex;
+    padding: 0 3%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.logo
+{
+    font-size: 2em;
+    letter-spacing: 6px;
+    font-family: 'Courier New', Courier, monospace
+}
+.header-logo
+{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-size: 1.5em;
+}
+h3
+{
+    vertical-align: bottom;
+}
+.header-logo1
+{
+    color: rgb(95, 183, 255);
+}
+.header-logo2
+{
+    color: chartreuse;
+}
+.header-logo3
+{
+    color: coral;
+}
+.header-logo4
+{
+    color: crimson;
+}
+.header-link
+{
+    height: 100%;
+    flex: 0.75;
+}
+.header-link_block
+{
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+}
+.header-link-ul
+{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.9;
+    align-items: center;
+}
+.header-link-a
+{
+    min-width: 20%;
+    text-align: center;
+    border-radius: 3px;
+    text-shadow: 4px 20px 3px rgb(47, 77, 56);
+}
+.header-link-a:hover
+{
+    box-shadow: 0 0 10px rgb(20, 15, 15);
+    background: rgb(116, 255, 209);
+    color: rgb(0, 0, 0);
+    text-shadow: none;
+}
+.header-link-li
+{
+    align-items: center;
+    font-size: 1.2em;
+    opacity: 0.9;
+    align-items: center;
+    
+}
+.header-boder
+{
+    width: 3px;
+    height: 20px;
+    border: 1px solid rgb(77, 73, 73);
+}
+.header-link-input
+{
+    height: 32px;
+    text-align: center;
+    position: relative;
+}
+.header-link-input-block
+{
+    height: 100%; 
+    outline: none;
+    background: #170F23;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.header-link-input-block:focus
+{
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.header-icon
+{
+    position: absolute;
+    color: dimgrey;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 87%;
+    font-size: 0.8em;
+}
+.header-icon:hover
+{
+    color: #170F23;
+}
+
+
+
+.header-box-audio
+{
+    min-width: 95px;
+    min-height: 95px;
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    animation: box-color 3s linear infinite;
+}
+
+.header-box-audio::after
+{
+    content: " ";
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    border-bottom: rgb(100, 255, 113) 2px solid;
+    animation: loop 2s linear infinite;
+}
+
+@keyframes loop
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    20%
+    {
+        border-bottom: steelblue 2px solid;
+       
+    }
+    40%
+    {
+        border-bottom: rgb(82, 255, 212) 2px solid;
+    }
+    60%
+    {
+        border-bottom: rgb(194, 255, 81) 2px solid;
+    }
+    80%
+    {
+        border-bottom: rgb(255, 150, 65) 2px solid;
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+
+}
+@keyframes box-color
+{
+    0%
+    {
+        transform: rotate(0deg);
+        box-shadow: 0 0 5px rgb(166, 192, 241) ;
+
+    }
+    25%
+    {
+        box-shadow: 0 0 10px rgb(90, 252, 171);
+
+    }
+    50%
+    {
+        transform: rotate(180deg);
+        box-shadow: 0 0 5px rgb(28, 102, 71);
+
+    }
+    75%
+    {
+        box-shadow: 0 0 10px rgb(74, 189, 255);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.music
+{
+    font-size: 1.8em;
+    color: #ffffff;
+    letter-spacing: 3px;
+}
+
+
+/* ---------------------------------------main---------------------------------------------- */
+
+main
+{
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+}
+
+.text-main 
+{
+    margin: 20px auto 10px auto;
+    padding-top: 20px;
+}
+/* ---------------------left---------------------- */
+.nav-left
+{
+    width: 17%;
+    height: 100%;
+    border-right: 2px solid rgb(43, 38, 38);
+}
+
+.nav-left-top
+{
+    height: 39%;
+    padding:  0 10%;
+    min-height: 100px;
+}
+.nav-left-top-ul
+{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom: 1px solid  rgb(43, 38, 38);
+   
+}
+.nav-left-top-li
+{
+    color:white;
+    font-size: 1.2em;
+    align-items: center;
+    text-align: center;
+    opacity: 0.8;
+    position: relative;
+    border-radius: 5px;
+}
+
+.nav-left-top-li:before
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translate(0, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.nav-left-top-li:hover
+{
+    opacity: 1;
+    text-shadow: 0 0 10px rgb(146, 248, 214);
+    background: rgb(255, 255, 255);
+    color: #231B2E;
+
+}
+
+
+
+/* ----------------------------------- */
+.nav-left-bot
+{
+    height: 39%;
+    min-height: 100px;
+    padding: 0 10%;
+}
+.nav-left-bot-ul
+{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.nav-left-bot-li
+{
+    color:white;
+    font-size: 1.2em;
+    align-items: center;
+    text-align: center;
+    opacity: 0.8;
+}
+.nav-left-bot-li:hover
+{
+    opacity: 1;
+    text-shadow: 0 0 10px rgb(146, 248, 214);
+    background: rgb(255, 255, 255);
+    color: #231B2E;
+    border-radius: 5px;
+}
+.nav-left-icon
+{
+    float: left;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+.nav-left-icon:hover
+{
+    color: rgb(0, 47, 255);
+}
+.nav-left-bot-input
+{
+    height: 30px;
+    width: 100%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+.nav-left-bot-input:hover
+{
+    background: rgb(3, 196, 255);
+    transition-duration: .2s;
+}
+
+
+/* ------------------------------------------------nav right----------------------------------*/
+.main-right
+{
+    display: flex;
+    flex-direction: column;
+    width: 83%;
+
+}
+.nav-right
+{
+    height: 80vh;
+    min-height: 300px;
+    padding: 0 10px;
+    overflow-y: scroll;
+}
+.nav-right::-webkit-scrollbar
+{
+    width: 10px;
+}
+.nav-right::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(rgb(59, 248, 255), rgb(149, 252, 212), rgb(61, 255, 174), rgb(149, 252, 212), rgb(120, 246, 255));
+    border-radius: 5px;
+}
+.nav-right-header
+{
+    width: 100%;
+    height: 12px;
+    background: inherit;
+}
+.nav-right-top
+{
+    height: 80vh;
+}
+
+.nav-right-top-img
+{
+    height: 48%;
+    min-height: 150px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.nav-right-top-img_box 
+{
+    margin-right: 10px;
+    width: 25%;
+    height: 100%;
+    border-radius: 6px;
+    background-size: cover;
+    box-shadow: 0 0px 10px rgb(0, 0, 0);
+    position: relative;
+    text-align: center;
+    border: 2px solid black;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 0 5px black);
+}
+
+.nav-right-top-img_box:last-child
+{
+    margin: unset;
+}
+
+
+
+
+.more-item
+{
+   text-align: center;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+}
+.nav-right-box-none:hover
+{
+    transition: .5s;
+    font-size: 10em;
+    background: #2a2238;
+    color: white;
+    box-shadow: none;
+}
+.nav-right-top-img_box_label:after
+{
+    content: "new";
+    align-items: center;
+    line-height: 28px;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    opacity: 0.8;
+    width: 30px;
+    height: 30px;
+    background: rgba(46, 32, 66, 0.8);
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 6px;
+}
+.nav-right-play
+{
+    width: 100%;
+    height: 100%;
+    font-size: 4em;
+    opacity: 0;
+}
+.nav-right-play:hover
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    transition: 0.5s;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0.8;
+    color: white;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+.nav-right-top-img_box:hover
+{
+    background-size: 120%;
+    transition: 0.5s;
+    width: 40%;
+    box-shadow: 10px 10px 10px black;
+}
+.nav-right-top-img
+{
+    height: 48%;
+    display: flex;
+    margin-bottom: 10px;
+}
+.nav-right-box-none
+{
+    position: relative;
+    color: #2a2238;
+    font-size: 5em;
+    background: none;
+}
+
+.nav-right-mid
+{
+    width: 90%;
+    height: 6px;
+    border: 1px solid  rgb(61, 85, 88);
+    border-radius: 5px;
+    margin: 0 auto;
+    box-shadow: 0 0 3px rgb(21, 32, 31);
+}
+.nav-right-bot
+{
+    height: 80vh;
+    padding-top: 23vh;
+    min-height: 400px;
+}
+
+
+.nav-right-form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.nav-right-form-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 15px;
+}
+.nav-right-form-input
+{
+    margin-top: 5px;
+    height: 17%;
+    width: 25%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 4px solid rgb(78, 73, 73);
+    background: inherit;
+    text-align: center;
+    box-shadow: 0 0 5px black;
+    color: white;
+}
+.nav-right-form-input:hover
+{
+    box-shadow: 0 0 10px white;
+    border: unset;
+}
+.nav-right-form-input:focus
+{
+    background: rgb(59, 255, 102);
+    color: black;
+}
+.nav-right-form-title
+{
+    margin-bottom: 5vh;
+    letter-spacing: 5px;
+    font-size: 2em;
+    display: flex;
+    align-items: baseline;
+}
+.nav-right-form-login
+{
+    letter-spacing: 3px;
+    font-size: 2em;
+    text-shadow: 0 0 10px springgreen;
+    font-family: sans-serif;
+}
+#submit
+{
+    width: 10%;
+    border-bottom: 2px solid springgreen;
+}
+#submit:hover
+{
+    border: unset;
+    box-shadow: 0 0 5px rgb(122, 255, 199);
+}
+.text-margin
+{
+    margin-left: 15px;
+}
+
+/* -------------------------------------------------footer--------------------------------------------------- */
+footer
+{
+    background: linear-gradient(180deg, #1e162b, rgb(26, 20, 31));
+    height: 25vh;
+    min-height: 150px;
+    border-top: 2px solid rgb(43, 38, 38);
+    padding: 20px 87px;
+}
+.footer
+{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.footer-contact
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.footer-follow
+{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.footer-follow-box
+{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-icon
+{
+    margin-right: 10px;
+}
+.fab 
+{
+    font-size: 2em;
+}
+
+
+
+/* ----------------------------------------link------------------------------------------------- */
+
+.nav-right-top-img1
+{
+    background-image: url(https://cuoifly.tuoitre.vn/820/0/ttc/r/2020/12/15/2020-12-15-201314-160803802811024073048-1608041046.jpg);
+
+}
+
+.nav-right-top-img2
+{
+    background-image: url(https://i.vietgiaitri.com/2019/12/23/poster-mv-moi-cho-thay-ro-su-bat-cong-ma-jack-phai-chiu-dung-tu-me-con-kicm-f95a94.jpg);
+}
+.nav-right-top-img3
+{
+    background-image: url(https://mensfolio.vn/wp-content/uploads/2020/11/IMG_7908.png);
+}
+.nav-right-top-img4
+{
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-musical-carnival-poster-background-material-image_175356.jpg);
+}
+
+.nav-right-top-img2_1
+{
+    background-image: url(http://kenh14cdn.com/2020/11/1/toa20-16041942371801562925872.jpg);
+}
+.nav-right-top-img2_2
+{
+    background-image: url(https://lh3.googleusercontent.com/proxy/D7MihLJLbxfMU_l71X1saSf4__6u8BWNCtUPv6UE-K1vHk6DelJ5rDPIO80OmSB-cPY_xB4IqBXph0xAjKLwOocXsLQXVYPnz9iKKnmD6NtRgA);
+}
+.nav-right-top-img2_3
+{
+    background-image: url(https://img.lovepik.com/free_template/33/21/33/1158PIC58PICNRQfas1C372RT_PIC2018.jpg_detail.jpg!detail808);
+}
+.nav-right-top-img2_4
+{
+    background-image: url(https://inrenhat.net/wp-content/uploads/2018/07/poster-Copy.jpg);
+}
+
+.nav-right-top-img3_1
+{
+    background-image: url(https://lh3.googleusercontent.com/proxy/GuXob2Qmv7AO5hVr-H7sOv18_bDYM7K0llSB2hnkKcJwOy37GdUEJER70CoTS4aQil2kkn62TI1Uao1_nfOpF2AadDaP7SEllYo7w0A9vjhBSLRUHAyUT38_khLMnu42tw53oP9t7x_BkfBogp78WZcxl4hUJWW05Re_hSPQGdjvNld7ArX9k7uncA);
+}
+.nav-right-top-img3_2
+{
+    background-image: url(https://nghesiviet.vn/storage/files/7/bichphuong/bich-phuong-2.jpg);
+}
+.nav-right-top-img3_3
+{
+    background-image: url(https://lh3.googleusercontent.com/proxy/vw9MyRFPcSEU_vnLq6hh6NPEDTKEreEZ26KXjUaweJHXrofzEPLs_iqIK9bcUdB7miescUAZrXt5R_r1evAP55dL54SrpQmb-ujriJiXNGuZdA);
+}
+.nav-right-top-img3_4
+{
+    background-image: url(https://cly.onecmscdn.com/2020/11/21/z2188870519650_8c1c0607b71aac3c03a73472d47a3c42.jpg);
+}
+
+.nav-right-top-imgt1
+{
+    background-image: url(https://i.imgur.com/K7V26PG.png);
+}
+
+.nav-right-top-imgt2
+{
+    background-image: url(https://sotavn.com/media/stories/images/nhan-thiet-ke-poster2.png);
+}
+.nav-right-top-imgt3
+{
+    background-image: url(https://i.pinimg.com/originals/ea/37/4a/ea374a16d424606b84316209c6494516.png);
+}
+.nav-right-top-imgt4
+{
+    background-image: url(https://i.pinimg.com/originals/d8/2a/f6/d82af6043b9d43ba4e6906001dd3b86b.jpg);
+}
+.nav-right-top-img4_1
+{
+    background-image: url(https://kenh14cdn.com/thumb_w/660/2020/2/19/photo2020-02-1920-34-43-1582127924148106915297.jpg);
+}
+.nav-right-top-img4_2
+{
+    background-image: url(https://cly.onecmscdn.com/2020/11/21/z2188870374590_ae009908c39fcef6fbdf0f6aae94cb8e.jpg);
+}
+.nav-right-top-img4_3
+{
+    background-image: url(https://danviet.mediacdn.vn/upload/4-2019/images/2019-12-24/jack-bi-chan-thuong-nang-sau-canh-quay-hanh-dong-trong-mv-song-gio-18df29cf-15771162273191271081963-1577133966-width660height371.jpg);
+}
+.nav-right-top-img4_4
+{
+    background-image: url(https://static2.yan.vn/YanNews/2167221/201905/duc-phuc-bi-fan-troll-khi-tung-poster-mv-yeu-duoc-khong-728ab6ef.jpg);
+}
+
+.nav-right-top-img5_1
+{
+    background-image: url(https://static.yeah1.com/uploads/editors/12/2020/01/08/yw0BmEbUgYKjLCCPkbytij3xbCl1VGtXQzaVOESB.jpeg);
+}
+.nav-right-top-img5_2
+{
+    background-image: url(https://ss-images.saostar.vn/wp700/2019/08/26/5919960/poster-mv.jpg);
+}
+.nav-right-top-img5_3
+{
+    background-image: url(http://emagazine24.net/wp-content/uploads/2019/12/Poster.jpg);
+}
+.nav-right-top-img5_4
+{
+    background-image: url(https://2sao.vietnamnetjsc.vn/images/2019/12/23/11/43/ed1.jpg);
+}
+
+.nav-right-top-img6_1
+{
+    background-image: url(https://image.thanhnien.vn/800/uploaded/congthang/2020_09_11/jp02_tofs.jpg);
+}
+.nav-right-top-img6_2
+{
+    background-image: url(https://lh3.googleusercontent.com/proxy/UK9y1KTPzwC48tsfx-kr3LdEozKoJ3eD_4nz1Y1GeUNy6AtsFlbccqI2Xv987yV_AU8flQ4wXffqAFhWBNlNNvqSMZEMdblHGH7vh5_KTj1rbgDX2V7JgueNkNdMngJ_BQniz0HC1o1qGVNtpfGQVutQINuKo1hQvYL1K_76niNdV07ol5I-vk2xnCaIVaNePCI);
+}
+.nav-right-top-img6_3
+{
+    background-image: url(https://lh3.googleusercontent.com/proxy/YXupbab3Jjo9x5PuoCK66DMd7h0ZBLdowdJRCKjj0jFYroMw2JpoC3LdIfT1aIaEzL-ZC8bG_hb5PCsj3FxyVsked9YY3VSHmpLGxf2zJUpet3qiZqMrc6CFr2SyYIDsWF4);
+}
+.nav-right-top-img6_4
+{
+    background-image: url(https://lh3.googleusercontent.com/proxy/SQ689WmW1Y1Su4JhyamHABqIFUaAhQ9oDLwwGaUVTzXEQJVELZkNV-IhNF0zW0p8wjiZZomhfzxfSo2zZkWMPcZilDmOljzvplOVv6TaEg5qbrOM0g6w7jwLvoUuWDLruUI);
+}
+
+.nav-right-top-img7_1
+{
+    background-image: url(https://tiepthigiadinh.net.vn/wp-content/uploads/2019/10/7130828924812128354419964436429671755677696n-1570214568633688492859.jpg);
+}
+.nav-right-top-img7_2
+{
+    background-image: url(https://vtv1.mediacdn.vn/thumb_w/640/2018/6/28/photo-1-15301956305981322642251.jpg);
+}
+.nav-right-top-img7_3
+{
+    background-image: url(https://billboardvn.vn/wp-content/uploads/2019/12/80226852_2840311399332510_5845749028737777664_o.jpg);
+}
+.nav-right-top-img7_4
+{
+    background-image: url(https://i.ibb.co/FgBNyy9/021-Official-Poster.jpg);
+}
+
+.nav-right-top-img8_1
+{
+    background-image: url(https://gialainews.com/wp-content/uploads/2020/06/1591269459_384_Bat-ngo-noi-tieng-vi-dang-anh-tim-phong-tro.jpg);
+}
+.nav-right-top-img8_2
+{
+    background-image: url(https://static2.yan.vn/YanNews/2167221/202004/nguyen-vu-tung-poster-tro-lai-am-nhac-bang-mv-tuong-nho-mai-phuong-46cf5056.jpg);
+}
+.nav-right-top-img8_3
+{
+    background-image: url(http://bizweb.dktcdn.net/100/060/439/files/poster-cho-album-nhac-07.jpg?v=1470755657833);
+}
+.nav-right-top-img8_4
+{
+    background-image: url(https://lh3.googleusercontent.com/proxy/f8nY8dfNJmYuYxlGAh9I0aA69h1ux0Q2ULvG5Hrcyj3pFK8jI59uoNloEIRglWOJ27PP_qc2-ISeo-QTYQhzE_cEUwY);
+}
+
+.nav-right-top-img9_1
+{
+    background-image: url(https://i.pinimg.com/736x/76/09/37/7609372f0d0d0653fe78a16498ea8b29.jpg);
+}
+.nav-right-top-img9_2
+{
+    background-image: url(https://danviet.mediacdn.vn/upload/4-2019/images/2019-12-27/80700640_2634656679951775_5569925932635914240_o-1577389492-width700height1049.jpg);
+}
+.nav-right-top-img9_3
+{
+    background-image: url(https://lh5.googleusercontent.com/hhZYaiAezjuGnWUScuJp4t_w4fEG1Ar0_9d3F41_K5KF-isIVTMBrJ4s6BGzfn0irz7um2fYjQr7YLpT0x6hPmX4Lo_UcL5y2YIueLuu0mZu3N55UmgT1X40wjRKmIAAzHUyQkf_);
+}
+.nav-right-top-img9_4
+{
+    background-image: url(https://we25.vn/media/images/my-tam-2.jpg);
+}
+
+.nav-right-top-img0_1
+{
+    background-image: url(https://afamilycdn.com/150157425591193600/2020/9/5/batchposter-anh-noo-final11--15993073452871183372456.jpg);
+}
+.nav-right-top-img0_2
+{
+    background-image: url(https://static2.yan.vn/YanNews/202005/202005270917154927-a389131f-1933-4377-a08d-9ea4f59768ab.jpeg);
+}
+.nav-right-top-img0_3
+{
+    background-image: url(https://gocvietstar.com/wp-content/uploads/2020/10/9640510111371544666436843669346743163551744o-1589359739239597657073-15893597629661666964549.png);
+}
+.nav-right-top-img0_4
+{
+    background-image: url(https://media.travelmag.vn/files/thuyngoc/2020/06/30/1061332173675372452476431818456362453126714o-1593518828725695475556-2019.jpg);
+}
