@@ -503,7 +503,6 @@ main
 .nav-right-top-img_box_label:after
 {
     content: "new";
-    align-items: center;
     line-height: 28px;
     font-size: 1em;
     color: rgb(255, 255, 255);
