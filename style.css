@@ -168,8 +168,9 @@ h3
 .header-boder
 {
     width: 3px;
-    height: 20px;
+    height: 18px;
     border: 1px solid rgb(77, 73, 73);
+    box-shadow: 4px 20px 2px rgb(51, 48, 48);
 }
 .header-link-input
 {
