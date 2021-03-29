@@ -503,7 +503,7 @@ main
 .nav-right-top-img_box_label:after
 {
     content: "new";
-    line-height: 28px;
+    line-height: 25px;
     font-size: 1em;
     color: rgb(255, 255, 255);
     opacity: 0.8;
