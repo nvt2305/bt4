@@ -126,7 +126,7 @@ h3
 .header-link
 {
     height: 100%;
-    flex: 0.75;
+   
 }
 .header-link_block
 {
@@ -135,6 +135,7 @@ h3
     display: flex;
     justify-content: space-between;
     font-size: 1.3em;
+    flex: 0.75;
 }
 .header-link-ul
 {
