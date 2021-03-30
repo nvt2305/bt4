@@ -691,9 +691,17 @@ footer
 .footer-contact
 {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+}
+
+.contact-icon
+{
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+.contact-item:not(:last-child)
+{
+    margin-bottom: 5px;
 }
 .footer-follow
 {
@@ -706,16 +714,16 @@ footer
 {
     display: flex;
     justify-content: space-between;
-}
-.footer-icon
-{
-    margin-right: 10px;
-}
-.fab 
-{
     font-size: 2em;
+    align-items: center;
 }
 
+.footer-follow-icon
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 
 
 /* ----------------------------------------link------------------------------------------------- */
