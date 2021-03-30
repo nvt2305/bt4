@@ -707,12 +707,13 @@ footer
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 100%;
 }
 .footer-follow-box
 {
     display: flex;
+    flex: 1;
     justify-content: space-between;
     font-size: 2em;
     align-items: center;
@@ -721,8 +722,6 @@ footer
 .footer-follow-icon
 {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
 /* ----------------------------------------link------------------------------------------------- */
