@@ -459,25 +459,6 @@ main
     display: flex;
 }
 
-.nav-right-top-img_box 
-{
-    margin-right: 10px;
-    width: 25%;
-    height: 100%;
-    border-radius: 6px;
-    background-size: cover;
-    box-shadow: 0 0px 10px rgb(0, 0, 0);
-    position: relative;
-    text-align: center;
-    border: 2px solid black;
-    image-rendering: pixelated;
-    filter: drop-shadow(0 0 5px black);
-}
-
-.nav-right-top-img_box:last-child
-{
-    margin: unset;
-}
 
 
 
@@ -500,6 +481,27 @@ main
     color: white;
     box-shadow: none;
 }
+
+.nav-right-top-img_box 
+{
+    margin-right: 10px;
+    width: 25%;
+    height: 100%;
+    border-radius: 6px;
+    background-size: cover;
+    box-shadow: 0 0px 10px rgb(0, 0, 0);
+    position: relative;
+    text-align: center;
+    border: 2px solid black;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 0 5px black);
+}
+
+.nav-right-top-img_box:last-child
+{
+    margin: unset;
+}
+
 .nav-right-top-img_box_label:after
 {
     content: "new";
@@ -596,21 +598,23 @@ main
     width: 25%;
     outline: none;
     border: none;
-    border-radius: 10px;
-    border-bottom: 4px solid rgb(78, 73, 73);
+    border-radius: 7px;
+    border-bottom: 2px solid rgb(105, 140, 255);
     background: inherit;
     text-align: center;
-    box-shadow: 0 0 5px black;
     color: white;
 }
 .nav-right-form-input:hover
 {
-    box-shadow: 0 0 10px white;
+    transition: 0.3s;
     border: unset;
+    box-shadow: 0 0 1px 1px rgb(109, 184, 255);
 }
 .nav-right-form-input:focus
 {
     background: rgb(59, 255, 102);
+    border-bottom: unset;
+    box-shadow: unset;
     color: black;
 }
 .nav-right-form-title
@@ -636,7 +640,7 @@ main
 #submit:hover
 {
     border: unset;
-    box-shadow: 0 0 5px rgb(122, 255, 199);
+    box-shadow: 0 0 1px 1px rgb(122, 255, 199);
 }
 .text-margin
 {
