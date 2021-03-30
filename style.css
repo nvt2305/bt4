@@ -691,6 +691,9 @@ footer
 .footer-contact
 {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .contact-icon
@@ -699,10 +702,7 @@ footer
     width: 20px;
     text-align: center;
 }
-.contact-item:not(:last-child)
-{
-    margin-bottom: 5px;
-}
+
 .footer-follow
 {
     display: flex;
